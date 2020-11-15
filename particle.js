@@ -9,8 +9,8 @@
 class Particle {
 
   constructor(position) {
-    this.acceleration = createVector(0, 0.05);
-    this.velocity = createVector(random(-1, 1), random(-1, 0));
+    this.acceleration = createVector(0, 0.03);
+    this.velocity = createVector(random(-3, 3), random(-3, 3));
     this.position = position.copy();
     this.lifespan = 255;
   }
@@ -24,7 +24,7 @@ class Particle {
   update() {
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
-    this.lifespan -= 2;
+    this.lifespan -= 1.5;
   }
 
   // Method to display
